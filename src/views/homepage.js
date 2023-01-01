@@ -30,7 +30,7 @@ function homepageTemp(handler) {
     <p>Регистрирай се, за да получиш безплатно видео на тема „Как да се разделим с болките в гърба в три лесни
         стъпки“</p>
     
-    <img src="./images/yogaout.jpg" alt="yogaout" id="yogaout">
+    <img src="../images/yogaout.jpg" alt="yogaout" id="yogaout">
     <form id="freeVideos" @submit=${handler}>
         <input type="text" name="username" placeholder="Име" class="input-field" required>
         <input type="email" name="email" placeholder="Имейл" class="input-field" required> <br />
