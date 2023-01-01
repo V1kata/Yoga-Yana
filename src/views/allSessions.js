@@ -14,6 +14,7 @@ export async function allSessionsView(context) {
 }
 
 function allSessionsTemp(todayDate, tommorowDate, today, tomorrow) {
+    debugger
     return html`
     <h2 id="today">
         Това са свободните часове за ${todayDate}
