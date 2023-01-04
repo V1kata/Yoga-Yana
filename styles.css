@@ -162,10 +162,6 @@ main h2 {
     margin-left: 40px;
 }
 
-#registerForm label[for=surname] {
-    margin-left: 10px;
-}
-
 #registerForm label[for=rePass] {
     margin-left: -55px;
 }
@@ -397,8 +393,8 @@ main h2 {
         margin-left: 5px;
     }
 
-    #registerForm label[for=surname] {
-        margin-left: -25px;
+    #registerForm label[for=username] {
+        margin-left: -40px;
     }
 
     #registerForm label[for=email] {

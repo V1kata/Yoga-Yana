@@ -12,13 +12,17 @@ export function registerView(context) {
 
 async function onSubmit(data) {
     await register(data);
-    // ctx.updateNav();
     ctx.page.redirect('/');
 }
 
-function verification({ name, surname, email, password, rePass, trainer }) {
+function verification({ name, surname, username, email, password, rePass, trainer }) {
     if (!name || !surname || !email || !password || !rePass) {
         alert('Please fill all the fields with the required information');
+        return;
+    }
+
+    if (username.length < 3 || username.length > 20) {
+        alert('Username need to be between 3 bad 20 symbols');
         return;
     }
 
@@ -56,8 +60,8 @@ function registerTemp(handler, seePass) {
     <form class="form" id="registerForm" @submit=${handler}>
         <label for="name">Name</label>
         <input type="text" name="name"> <br />
-        <label for="surname">Surname</label>
-        <input type="text" name="surname"> <br />
+        <label for="username">Username</label>
+        <input type="text" name="username"> <br />
         <label for="email">Email</label>
         <input type="email" name="email"> <br />
         <label for="password">Password</label>
