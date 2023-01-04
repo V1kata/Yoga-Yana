@@ -41,3 +41,9 @@ function renderMiddleWare(ctx, next) {
 
     next();
 }
+
+function home() {
+    document.getElementById('homepage').click();
+}
+
+home();

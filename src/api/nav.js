@@ -11,7 +11,7 @@ export function navBar(ctx, next) {
 
 function navTemp(user) {
     return html`
-    <li><a id="catalogLink" href="/">Home</a></li>
+    <li><a id="homepage" href="/">Home</a></li>
     <li><a href="/allSessions">All sessions</a></li>
     ${!user ?
     html`

@@ -1,5 +1,6 @@
 import { html } from "../api/lib.js";
-import { createSubmitHandler } from "../api/user.js";
+import { createSubmitHandler, getUserData } from "../api/user.js";
+const user = getUserData();
 
 export function homepageView(ctx) {
     console.log('homepage view');
@@ -12,6 +13,15 @@ function onSubmit(data) {
         alert('Please read the privacy policy and agree before submitting');
         return
     }
+
+    if (!user) {
+        alert('Моля логнете се преди да изпратете имейл за получавабе на безплатните видеа');
+        return;
+    }
+
+    const a = document.createElement('a');
+    a.setAttribute('href', `mailto:yana.636@gmail.com?subject=Free Videos&body=Send the free videos please`);
+    a.click();
 }
 
 function homepageTemp(handler) {
@@ -30,13 +40,13 @@ function homepageTemp(handler) {
     <p>Регистрирай се, за да получиш безплатно видео на тема „Как да се разделим с болките в гърба в три лесни
         стъпки“</p>
     
-    <img src="./images/yogaout.jpg" alt="yogaout" id="yogaout">
+    <img src="/images/yogaout.jpg" alt="yogaout" id="yogaout">
     <form id="freeVideos" @submit=${handler}>
-        <input type="text" name="username" placeholder="Име" class="input-field" required>
-        <input type="email" name="email" placeholder="Имейл" class="input-field" required> <br />
+        <input type="text" name="name" placeholder="Име" class="input-field" required>
+        <input type="email" name="surname" placeholder="Фамилия" class="input-field" required> <br />
         <input type="checkbox" name="agreement" class="checkbox">
-        <label for="agreement" class="checkbox">Съгласен/на съм предоставените от мен данни да бъдат събирани и
-            съхранявани - <a href="https://viktor-burboran-privacy.mynotice.io/">Privacy Policy</a></label>
+        <label for="agreement" class="checkbox">Съгласен/а съм предоставените от мен данни да бъдат събирани и
+            съхранявани - <a href="https://viktor-burboran-privacy.mynotice.io/" target="_blank">Privacy Policy</a></label>
         <button>Изпрати</button>
     </form>`
 }

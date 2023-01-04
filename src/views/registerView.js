@@ -59,8 +59,10 @@ function registerTemp(handler, seePass) {
     </h2>
     
     <form class="form" id="registerForm" @submit=${handler}>
-        <label for="username">Username</label>
-        <input type="username" name="username"> <br />
+        <label for="name">Name</label>
+        <input type="text" name="name"> <br />
+        <label for="surname">Surname</label>
+        <input type="text" name="surname"> <br />
         <label for="email">Email</label>
         <input type="email" name="email"> <br />
         <label for="password">Password</label>

@@ -14,18 +14,12 @@ export async function allSessionsView(context) {
 }
 
 function allSessionsTemp(todayDate, tommorowDate, today, tomorrow) {
-    debugger
     return html`
-    <h2 id="today">
-        Това са свободните часове за ${todayDate}
-    </h2>
-    
-    <h2 id="tomorow">
-        Това са свободните часове за ${tommorowDate}
-    </h2>
-    
     <div id="outer">
         <div id="todayDiv">
+            <h2 id="today">
+                Това са свободните часове за ${todayDate}
+            </h2>
             ${today.length ?
             today.map(el => allSessionsTodayTemp(el)) :
             html`<b>
@@ -34,6 +28,9 @@ function allSessionsTemp(todayDate, tommorowDate, today, tomorrow) {
         </div>
     
         <div id="tomorowDiv">
+            <h2 id="tomorow">
+                Това са свободните часове за ${tommorowDate}
+            </h2>
             ${tomorrow.length ?
             tomorrow.map(el => allSessionsTomorowTemp(el)) :
             html`<b>
