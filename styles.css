@@ -93,7 +93,7 @@ main h2 {
     box-shadow: 5px 5px 2px black;
 }
 
-.form  >  i {
+.form > i {
     margin-left: -40px;
     cursor: pointer;
 }
@@ -149,16 +149,21 @@ main h2 {
 
 /* Register */
 #registerForm {
-    height: 500px;
+    height: 550px;
+    z-index: -1;
 }
 
 #registerForm > input {
     margin-bottom: 50px;
-    height: 6%;
+    height: 5%;
 }
 
-#registerForm label[for=email] {
-    margin-left: 35px;
+#registerForm label[for=email], #registerForm label[for=name] {
+    margin-left: 40px;
+}
+
+#registerForm label[for=surname] {
+    margin-left: 10px;
 }
 
 #registerForm label[for=rePass] {
@@ -180,7 +185,6 @@ main h2 {
 }
 
 #loginForm > label[for=password] {
-    /* margin-left: 35px; */
     margin-left: -35px;
 }
 
@@ -188,8 +192,9 @@ main h2 {
     margin-bottom: 75px;
 }
 
-/* Train Session */
+/* Train Session Form */
 #trainSessionForm {
+    z-index: -1;
     height: 600px;
 }
 
@@ -198,44 +203,34 @@ main h2 {
 }
 
 /* All Sessions */
-#outer {
-    padding-top: 70px;
-}
-
-#today {
-    float: left;
-    margin-left: 150px;
-}
-
-#tomorow {
-    float: right;
-    margin-right: 150px;
-}
-
 #todayDiv, #tomorowDiv {
-    position: absolute;
-    width: 500px;
     z-index: -1;
 }
 
 #todayDiv {
-    left: 12%;
-    border-right: 5px dotted blue;
-    padding-right: 15%;
+    float: left;
+    margin-left: 40px;
+    border-right: 4px dotted blue;
+    padding-right: 10%;
 }
 
 #tomorowDiv {
-    right: 6%;
-}   
+    float: right;
+    margin-right: 40px;
+}
 
 .innerData {
     text-align: center;
     background-color: lightpink;
     margin: 30px;
     padding: 5px;
-    width: 50%;
+    width: 250px;
     height: 150px;
     font-size: 25px;
+}
+
+.innerData > #todayDiv {
+    padding-left: 30px;
 }
 
 .innerData > a {
@@ -246,7 +241,7 @@ main h2 {
 }
 
 #todayDiv > b > p, #tomorowDiv > b > p {
-    color: rgb(0, 0, 0);
+    color: black;
     font-size: 50px;
 }
 
@@ -282,12 +277,16 @@ main h2 {
 }
 
 #content > div > p {
-    position: absolute;
-    left: 10%;
+    margin-top: -100px;
+    margin-left: 150px;
     font-size: 25px;
 }
 
-#content button{
+#content  >  div  >  .data {
+    margin-top: 0px;
+}
+
+#content button {
     position: relative;
     width: 300px;
     height: 70px;
@@ -300,43 +299,151 @@ main h2 {
 }
 
 #content > a > #edit {
-    left: 30%;
+    left: 20%;
     margin-left: 0px;
 }
 
 #content > a > #delete {
-    left: 45%;
+    left: 40%;
 }
 
+@media screen and (max-width: 1300px) {
+    #yogaout {
+        margin-left: 50px;
+    }
 
-#location > #pLocation {
-    top: 18%;
+    #freeVideos {
+        width: 500px;
+    }
+
+    #freeVideos > .input-field {
+        margin: 20px 5px;
+        width: 200px;
+        height: 35px;
+    }
+
+    #todayDiv {
+        border-right: none;
+        margin-left: 0px;
+    }
+
+    #tomorowDiv {
+        margin-right: 0px;
+    }
 }
 
-#location > #pName {
-    top: 23%;
-}
+@media screen and (max-width: 1080px) {
 
-#trainType > #pTypeTraining{
-    top: 30%;
-}
+    /* Nav */
+    nav > a > img {
+        height: 130px;
+    }
 
-#trainType > #pTypeName {
-    top: 35%;
-}
+    nav > ul {
+        padding-top: 45px;
+        padding-right: 40px;
+    }
 
-#hour > #pHour {
-    top: 42%;
-}
+    nav > ul > li > a {
+        font-size: 29px;
+    }
 
-#hour > #pTime {
-    top: 47%;
-}
+    /* Main */
+    main {
+        font-size: 30px;
+        padding: 150px 30px 0px;
+    }
 
-#trainer > #pTitle {
-    top: 54%;
-}
+    /* Forms */
+    .form > i {
+        margin-left: -50px;
+        margin-top: 20px;
+    }
 
-#trainer > #pName {
-    top: 59%;
+    /* Home page */
+    #freeVideos {
+        width: 700px;
+    }
+
+    #freeVideos > .input-field {
+        margin: 20px 10px;
+        width: 300px;
+        height: 35px;
+    }
+
+    #freeVideos > .checkbox {
+        margin-top: 30px;
+    }
+
+    #freeVideos > button {
+        width: 100%;
+        height: 30px;
+        font-size: 25px;
+        margin-top: 60px;
+        background-color: lightskyblue;
+    }
+
+    #yogaout {
+        margin-left: 300px;
+    }
+
+    /* Register */
+    #registerForm {
+        height: 670px;
+        width: 650px;
+    }
+
+    #registerForm label[for=name] {
+        margin-left: 5px;
+    }
+
+    #registerForm label[for=surname] {
+        margin-left: -25px;
+    }
+
+    #registerForm label[for=email] {
+        margin-left: 0px;
+    }
+
+    #registerForm label[for=password] {
+        margin-left: -55px;
+    }
+
+    #registerForm label[for=rePass] {
+        margin-left: -75px;
+        font-size: 20px;
+        color: black;
+    }
+
+    #registerForm > input[type=checkbox] {
+        margin-left: -65px;
+    }
+
+    /* Edit form */
+    #trainSessionForm {
+        height: 600px;
+    }
+
+    #trainSessionForm > input, #trainSessionForm > button {
+        height: 5%;
+    }
+
+    /* All Sessions */
+    #todayDiv {
+        float: none;
+        margin-left: 0px;
+        border-right: none;
+        padding-right: 0;
+    }
+
+    #tomorowDiv {
+        float: none;
+        margin-right: 0px;
+    }
+
+    .innerData {
+        position: relative;
+        left: 50%;
+        margin-left: -125px;
+    }
 }
