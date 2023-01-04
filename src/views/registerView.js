@@ -15,8 +15,8 @@ async function onSubmit(data) {
     ctx.page.redirect('/');
 }
 
-function verification({ name, surname, username, email, password, rePass, trainer }) {
-    if (!name || !surname || !email || !password || !rePass) {
+function verification({ name, username, username, email, password, rePass, trainer }) {
+    if (!name || !username || !email || !password || !rePass) {
         alert('Please fill all the fields with the required information');
         return;
     }
@@ -47,7 +47,7 @@ function verification({ name, surname, username, email, password, rePass, traine
         trainer = false;
     }
 
-    onSubmit({ name, surname, email, password, rePass, trainer });
+    onSubmit({ name, username, email, password, rePass, trainer });
 }
 
 
