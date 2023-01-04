@@ -10,11 +10,12 @@ const endpoint = {
     'getWhere': 'classes/TrainSession?where='
 }
 
-export async function register({ username, email, password, trainer }) {
-    const { sessionToken, objectId } = await post(endpoint.register, { email, username, password, trainer });
+export async function register({ name, username, email, password, trainer }) {
+    const { sessionToken, objectId } = await post(endpoint.register, { name, email, username, password, trainer });
 
     const userData = {
         objectId,
+        name,
         email,
         username,
         trainer,

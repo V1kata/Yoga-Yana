@@ -11,11 +11,12 @@ export function registerView(context) {
 }
 
 async function onSubmit(data) {
+    debugger
     await register(data);
     ctx.page.redirect('/');
 }
 
-function verification({ name, username, username, email, password, rePass, trainer }) {
+function verification({ name, username, email, password, rePass, trainer }) {
     if (!name || !username || !email || !password || !rePass) {
         alert('Please fill all the fields with the required information');
         return;
