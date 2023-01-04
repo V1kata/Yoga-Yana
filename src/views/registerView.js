@@ -22,11 +22,6 @@ function verification({ name, surname, email, password, rePass, trainer }) {
         return;
     }
 
-    if (username.length < 2 || username.length > 15) {
-        alert('Username need to be between 2 and 15 symbols');
-        return;
-    }
-
     if (password.length < 3 || password.length > 20) {
         alert('Password needs to be between 3 and 20 symbols');
         return;
