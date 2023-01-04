@@ -34,25 +34,25 @@ function hoursTemp(id, data, user, isOwner, found, freeSpace) {
     
     <div id="content">
         <div id="location">
-            <img src="../images/home.png" alt="Home">
+            <img src="https://cdn-icons-png.flaticon.com/512/25/25694.png" alt="Home">
             <p class="title">Местоположение: </p>
             <p class="data">${data.location}</p>
         </div>
     
         <div id="trainType">
-            <img src="../images/yoga-posture.png" alt="Yoga">
+            <img src="https://cdn-icons-png.flaticon.com/512/55/55316.png" alt="Yoga">
             <p class="title">Вид тренировка: </p>
             <p class="data">${data.trainType}</p>
         </div>
     
         <div id="hour">
-            <img src="../images/clock.png" alt="Clock">
+            <img src="https://cdn-icons-png.flaticon.com/512/109/109613.png" alt="Clock">
             <p class="title">Час на започаване: </p>
             <p class="data">${data.hour}</p>
         </div>
     
         <div id="trainer">
-            <img src="../images/trainer.png" alt="Trainer">
+            <img src="https://www.pngkey.com/png/full/833-8337681_personal-trainer-icon.png" alt="Trainer">
             <p class="title">Треньор: </p>
             <p class="data">${data.name}</p>
         </div>

@@ -40,7 +40,7 @@ function homepageTemp(handler) {
     <p>Регистрирай се, за да получиш безплатно видео на тема „Как да се разделим с болките в гърба в три лесни
         стъпки“</p>
     
-    <img src="/images/yogaout.jpg" alt="yogaout" id="yogaout">
+    <img src="https://inayana.com/wp-content/uploads/sites/2/2022/06/new.jpg" alt="yogaout" id="yogaout">
     <form id="freeVideos" @submit=${handler}>
         <input type="text" name="name" placeholder="Име" class="input-field" required>
         <input type="email" name="surname" placeholder="Фамилия" class="input-field" required> <br />
