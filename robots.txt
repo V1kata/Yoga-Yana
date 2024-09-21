@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: https://v1kata.github.io/sitemap.xml
